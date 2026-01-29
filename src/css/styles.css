@@ -16,3 +16,67 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-color: beige;
+}
+
+.row {
+  display: flex;
+  gap: 24px 24px;
+  width: max-content;
+  padding: 20px 0;
+  animation: scroll 200s linear infinite;
+  opacity: 0.4;
+}
+
+.row img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 50px 0;
+}
+
+.gallery img {
+  width: 360px;
+  height: 200px;
+}
