@@ -20,6 +20,8 @@ function handleSubmit (event) {
     if(formData.email.trim() && formData.message.trim()) {
         console.log(formData);
         event.target.reset();
+        formData.email = '';
+        formData.message = '';
         localStorage.removeItem(key);
     } 
     else {
@@ -42,5 +44,6 @@ function inputMessage(){
    if(intupText) {
     input.value = intupText.email;
     textarea.value = intupText.message;
+    formData = intupText;
    }
 }
